@@ -1,0 +1,6 @@
+多语言切换Alt+Shift
+
+同一语言下输入法切换:
+
+快捷键Alt +CapsLock 和Ctrl + CapsLock
+
