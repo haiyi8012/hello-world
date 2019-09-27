@@ -1,0 +1,21 @@
+### 参考该文档：https://www.bootcss.com/p/git-guide/
+
+git init
+
+git clone /path/to/repository or git clone username@host:/path/to/repository
+
+git add <filename> or git add *
+
+git commit -m "代码提交信息"
+
+git push origin master
+
+git remote add origin <server>
+如果你还没有克隆现有仓库，并欲将你的仓库连接到某个远程服务器
+
+分支：
+git checkout -b feature_x
+git checkout master
+git branch -d feature_x
+git push origin <branch>
+
