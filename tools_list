@@ -3,7 +3,7 @@ https://www.virtualbox.org/wiki/Downloads
 
 ・CentOS:
 http://isoredirect.centos.org/centos/8/isos/x86_64/CentOS-8-x86_64-1905-dvd1.iso
-备注：BIOS 中开启Virtualization，硬盘分配 12G
+备注：BIOS 中开启Virtualization，硬盘分配 12G， 安装完成后，取消光盘启动
 
 ・Git
 https://git-scm.com/downloads
