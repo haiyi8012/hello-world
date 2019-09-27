@@ -19,3 +19,7 @@ git checkout master
 git branch -d feature_x
 git push origin <branch>
 
+###如何用git将项目代码上传到github
+https://www.cnblogs.com/cxscode/p/8325064.html
+
+
