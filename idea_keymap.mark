@@ -1,0 +1,9 @@
+Ctrl + B , Ctrl + Click Go to declaration 
+
+Ctrl + / Comment/uncomment with line comment 
+
+Ctrl + Shift + / Comment/uncomment with block comment 
+
+Ctrl + W Select successively increasing code blocks 
+
+Ctrl + Shift + W Decrease current selection to previous state 
