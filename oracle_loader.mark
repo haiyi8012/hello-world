@@ -1,0 +1,50 @@
+外部表定义的几个重点
+a.ORGANIZATION EXTERNAL关键字，必须要有。以表明定义的表为外部表。
+b.重要参数外部表的类型
+ORACLE_LOADER：定义外部表的缺省方式，只能只读方式实现文本数据的装载。
+ORACLE_DATAPUMP：支持对数据的装载与卸载，数据文件必须为二进制dump文件。可以从外部表提取数据装载到内部表，也可以从内部表卸载数据作为二进制文件填充到外部表。
+c.DEFAULT DIRECTORY：缺省的目录指明了外部文件所在的路径
+d.LOCATION：定义了外部表的位置
+f.ACCESS PARAMETERS：描述如何对外部表进行访问
+RECORDS关键字后定义如何识别数据行 
+DELIMITED BY 'XXX'——换行符，常用newline定义换行，并指明字符集。对于特殊的字符则需要单独定义，如特殊符号，可以使用OX'十六位值'，例如tab(/t)的十六位是9，则DELIMITEDBY0X'09'；
+cr(/r)的十六位是d，那么就是DELIMITEDBY0X'0D'。
+SKIP X ——跳过X行数据，有些文件中第一行是列名，需要跳过第一行，则使用SKIP 1。
+FIELDS关键字后定义如何识别字段，常用的如下：
+FIELDS：TERMINATED BY 'x'——字段分割符。
+ENCLOSED BY 'x'——字段引用符，包含在此符号内的数据都当成一个字段。
+例如一行数据格式如："abc","a""b,""c,"。使用参数TERMINATED BY ',' ENCLOSED BY '"'后，系统会读到两个字段，第一个字段的值是abc，第二个字段值是a"b,"c,。
+LRTRIM ——删除首尾空白字符。
+MISSING FIELD VALUES ARE NULL——某些字段空缺值都设为NULL。
+对于字段长度和分割符不确定且准备用作外部表文件，可以使用UltraEdit、Editplus等来进行分析测试，如果文件较大，则需要考虑将文件分割成小文件并从中提取数据进行测试。
+外部表对错误的处理
+REJECT LIMIT UNLIMITED
+在创建外部表时最后加入LIMIT子句，表示可以允许错误的发生个数。默认值为零。设定为UNLIMITED则错误不受限制
+BADFILE和NOBADFILE子句
+用于指定将捕获到的转换错误存放到哪个文件。如果指定了NOBADFILE则表示忽略转换期间的错误
+如果未指定该参数，则系统自动在源目录下生成与外部表同名的.BAD文件BADFILE记录本次操作的结果，下次将会被覆盖 LOGFILE和NOLOGFILE子句
+同样在access parameters中加入LOGFILE 'LOG_FILE.log'子句，则所有Oracle的错误信息放入'LOG_FILE.log'中
+而NOLOGFILE子句则表示不记录错误信息到log中，如忽略该子句，系统自动在源目录下生成与外部表同名的.LOG文件
+注意以下几个常见的问题
+1.外部表经常遇到BUFFER不足的情况，因此尽可能的增大READSIZE
+2.换行符不对产生的问题。在不同的操作系统中换行符的表示方法不一样，碰到错误日志提示如是换行符问题，可以使用
+UltraEdit打开，直接看十六进制
+3.特定行报错时，查看带有"BAD"的日志文件,其中保存了出错的数据,用记事本打开看看那里出错,是否存在于外部表定义相冲突
+
+外部表的局限性
+１.SQLLDR可以指定多少提交一次，即ROWS=?, 外部表却没有，这对于大数据量的导入有些不方例。
+2.sqlldr errors表示允许错误的行数，外部表用REJECT LIMIT UNLIMITED，这个功能上基本相同。
+3.外部表的列不能指定为not nullable,这样就很难拒绝某列为空值的记录。
+4.外部表不能使用continueif ，如果记录有换行的就比较难处理。
+
+ 
+
+参考至:http://space.itpub.net/22578826/viewspace-703470
+
+            http://web.njit.edu/info/oracle/DOC/server.102/b14215/et_dp_driver.htm#g1017944
+
+            http://web.njit.edu/info/oracle/DOC/server.102/b14215/et_params.htm#g1031955
+
+            http://www.examda.com/oracle/zhonghe/20090817/091840581.html
+
+           
