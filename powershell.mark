@@ -1,0 +1,5 @@
+・設定を行って、
+1. 系统管理员 启动PowerShell
+2. get-ExecutionPolicy
+3. set-ExecutionPolicy RemoteSigned
+
