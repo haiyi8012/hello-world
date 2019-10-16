@@ -1,4 +1,5 @@
-・SQL developer Tool　debug setting
+#SQL developer Tool　debug setting
+```
   ---============ ADD ACL START
   SELECT acl,
          principal,
@@ -20,6 +21,13 @@
    );
   END;
   ---+++++++++++++++END
-  
+```
+```  
 SET SERVEROUTPUT ON;   
 CALL dbms_java.set_output(2000);
+```
+＃SQLCODE:-1031-ORA-01031: 権限が不足しています
+```
+SELECT * FROM system_privilege_map;
+grant all privileges to NAGAOKA
+```
