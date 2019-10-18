@@ -1,3 +1,55 @@
+#发送邮件异常ORA-29278 Service not available
+```
+--首先创建一个新的ACL文件
+BEGIN  
+    dbms_network_acl_admin.create_acl(acl         => 'httprequestpermission.xml',   --新文件名
+                                      DESCRIPTION => 'Normal Access',  
+                                      principal   => 'CONNECT',  --赋予角色 CONNECT
+                                      is_grant    => TRUE,  
+                                      PRIVILEGE   => 'connect',  
+                                      start_date  => NULL,  
+                                      end_date    => NULL);  
+END;
+/
+
+-- commit
+--提交完成后，查看acl文件是否建立；
+SELECT * --any_path 
+FROM resource_view WHERE any_path like '/sys/acls/%.xml';
+
+--将改ACL授权給某个用户，这里用scott代替；
+begin  
+    dbms_network_acl_admin.add_privilege(acl        => 'httprequestpermission.xml',  
+                                         principal  => 'NAGAOKA',  
+                                         is_grant   => TRUE,  
+                                         privilege  => 'connect',  
+                                         start_date => null,  
+                                         end_date   => null);  
+end; 
+/
+
+--授权主机域名地址等
+    begin  
+        dbms_network_acl_admin.assign_acl(acl        => 'httprequestpermission.xml',  
+                                          host       => 'www.qq.com',  
+                                          lower_port => 80,  
+                                          upper_port => NULL);  
+    end;  
+/
+begin  
+        dbms_network_acl_admin.assign_acl(acl        => 'httprequestpermission.xml',  
+                                          host       => 'smtp.qq.com',  
+                                          lower_port => 25,  
+                                          upper_port => NULL);  
+    end;  
+/
+
+--acl查询
+select * from dba_network_acl_privileges;
+--============
+
+```
+
 #SQL developer Tool　debug setting
 ```
   ---============ ADD ACL START
