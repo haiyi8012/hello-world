@@ -1,4 +1,13 @@
-#发送邮件异常ORA-29278 Service not available
+##发送邮件异常ORA-29278 Service not available
+```
+    --===test mark::
+        conn := utl_smtp.open_connection( 'smtp.qq.com', 25 );    
+        utl_smtp.helo(conn, 'smtp.qq.com' );
+        UTL_SMTP.COMMAND(conn,'AUTH LOGIN');
+        UTL_SMTP.COMMAND(conn,UTL_RAW.CAST_TO_VARCHAR2(UTL_ENCODE.BASE64_ENCODE(UTL_RAW.CAST_TO_RAW('83109357'))));
+        UTL_SMTP.COMMAND(conn,UTL_RAW.CAST_TO_VARCHAR2(UTL_ENCODE.BASE64_ENCODE(UTL_RAW.CAST_TO_RAW('wnymmcpkdujebhdh'))));
+    --===test mark end::
+```
 ```
 --首先创建一个新的ACL文件
 BEGIN  
