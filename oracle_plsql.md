@@ -1,3 +1,17 @@
+
+
+##将文件写入到BLOB字段
+```
+    wsWk_fname := 'aaa.zip'; --test
+    piece_bfile := BFILENAME('DATA_PUMP_DIR',wsWk_fname); --创建一个BFILE指针
+    DBMS_LOB.CREATETEMPORARY(wsWk_fbody,TRUE);
+    DBMS_LOB.OPEN(wsWk_fbody, DBMS_LOB.LOB_READWRITE);
+    DBMS_LOB.OPEN(piece_bfile, DBMS_LOB.FILE_READONLY);
+    -- 将b_file中的内容转换到b_lob
+    DBMS_LOB.LOADFROMFILE(wsWk_fbody, piece_bfile,DBMS_LOB.GETLENGTH(piece_bfile));
+    -- wsWk_fbody := piece_bfile;
+```
+
 ##发送邮件异常ORA-29278 Service not available
 ```
     --===test mark::
