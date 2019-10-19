@@ -1,16 +1,7 @@
 ##例えば、以下です
-#ps1の内容：
+#zip_files.ps1の内容：
 ```
 param($a,$b)
-
-# $pathArr = "D:/DIR_DUMP"+"/"+"DT_DJND0110"+".BAD", "D:/DIR_DUMP"+"/"+"DT_DJND0110"+".LOG"
-# $pathArr = "D:/DIR_DUMP/DT_DJND0110.BAD", "D:/DIR_DUMP/DT_DJND0110.LOG"
-$pathArr = $b.Split()
-# $pathArr = "args[0]/args[1].BAD", "args[0]/args[1].LOG"
-
-# $zipStr = "D:/DIR_DUMP"+"/"+"DT_DJND0110555"+".zip"
-# $zipStr = "$a/$b.zip"
-$zipStr = "D:/DIR_DUMP/DT_DJND0110890.zip"
 
 $compress = @{
 Path = $b
@@ -22,19 +13,14 @@ Compress-Archive @compress
 ```
 #plsql の部分：
 ```
--- mark:: ===========
--- powershell.exe D:\DIR_DUMP\ps1.ps1 "aa" "D:/DIR_DUMP/DT_DJND0110.LOG,D:/DIR_DUMP/DT_DJND0110.BAD, D:/DIR_DUMP/DT_DJND0110.csv"
-create or replace and compile java source named TestJava3 as
+create or replace and compile java source named zipFiles as
 import java.io.*;
 import java.util.*;
-public class TestJava3
+public class zipFiles
 { 
-  public static void test(String[] args)   
+  public static void doIt(String[] args)   
   {
-   System.out.println("Hello 3");
-    //String cmd = "cmd /c powershell D:/DIR_DUMP/test_ps_R.ps1 \"D:/DIR_DUMP/test.bat\" \"D:/DIR_DUMP/DT_DJND0110.BAD\"";
-   // String cmd = "cmd /c powershell D:/DIR_DUMP/test_ps.ps1 \""+args[0]+"\" \""+args[1]+"\"";
-    String cmd = "cmd /c powershell D:/DIR_DUMP/test_ps.ps1 \""+args[0]+"\" \""+args[1]+"\"";
+    String cmd = "cmd /c powershell D:/DIR_DUMP/zip_files.ps1 \""+args[0]+"\" \""+args[1]+"\"";
   
     try {
         Process ps = Runtime.getRuntime().exec(cmd);
@@ -45,14 +31,14 @@ public class TestJava3
   }   
 }
 
-create or replace procedure testJava3
+create or replace procedure ZipFiles
 (
 	Ps_FILE1		 VARCHAR2	,
 	Ps_FILE2		 VARCHAR2	
-) as language java name 'TestJava3.test(java.lang.String[])';
+) as language java name 'zipFiles.doIt(java.lang.String[])';
 
 --exec testJava3('D:/DIR_DUMP', 'aDT_DJND0110');
-exec testJava3('D:/DIR_DUMP/dkdkdkd001.zip', 'D:/DIR_DUMP/DT_DJND0110.LOG, D:/DIR_DUMP/DT_DJND0110.BAD, D:/DIR_DUMP/DT_DJND0110.csv');
+exec JINKYU2TMGIF.exeZipFiles('D:/DIR_DUMP/JINKYU2TMGIF003.zip', 'D:/DIR_DUMP/DT_DJND0110.LOG, D:/DIR_DUMP/DT_DJND0110.BAD, D:/DIR_DUMP/DT_DJND0110.csv');
 -- powershell.exe D:\DIR_DUMP\ps1.ps1 "aa" "D:/DIR_DUMP/DT_DJND0110.LOG,D:/DIR_DUMP/DT_DJND0110.BAD, D:/DIR_DUMP/DT_DJND0110.csv"
 -- end ======
 ```
