@@ -1,3 +1,22 @@
+## 数组 index from 0：
+```
+SET SERVEROUTPUT ON; 
+DECLARE  
+  TYPE test_type_array IS TABLE OF VARCHAR2(100) INDEX BY BINARY_INTEGER; --定义存放test记录的数组类型 
+  test_rec_array test_type_array; --声明变量，类型：存放test记录的数组类型
+BEGIN
+  --数组赋值
+  test_rec_array(1) := 'test1';
+  test_rec_array(2) := 'test55';
+
+  --循环输出数组元素
+  FOR i IN 1 .. test_rec_array.count LOOP
+    DBMS_OUTPUT.PUT_LINE('i=' || i || ',line_1=' || test_rec_array(i)
+                          || ',line_2=' || test_rec_array(i));
+  END LOOP;
+END;
+```
+
 ##例えば、以下です
 #zip_files.ps1の内容：
 ```
