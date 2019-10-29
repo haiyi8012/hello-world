@@ -1,6 +1,9 @@
+## CREATE OR REPLACE DIRECTORY
+```
+CREATE OR REPLACE DIRECTORY DIR_JINKYU2TMGIF_CSV AS 'D:\JINKYU2TMGIF_CSV';
+```
 
-
-##将文件写入到BLOB字段
+## 将文件写入到BLOB字段
 ```
     wsWk_fname := 'aaa.zip'; --test
     piece_bfile := BFILENAME('DATA_PUMP_DIR',wsWk_fname); --创建一个BFILE指针
@@ -12,7 +15,7 @@
     -- wsWk_fbody := piece_bfile;
 ```
 
-##发送邮件异常ORA-29278 Service not available
+## 发送邮件异常ORA-29278 Service not available
 ```
     --===test mark::
         conn := utl_smtp.open_connection( 'smtp.qq.com', 25 );    
@@ -73,7 +76,7 @@ select * from dba_network_acl_privileges;
 
 ```
 
-#SQL developer Tool　debug setting
+# SQL developer Tool　debug setting
 ```
   ---============ ADD ACL START
   SELECT acl,
@@ -101,13 +104,13 @@ select * from dba_network_acl_privileges;
 SET SERVEROUTPUT ON;   
 CALL dbms_java.set_output(2000);
 ```
-＃SQLCODE:-1031-ORA-01031: 権限が不足しています
+＃ SQLCODE:-1031-ORA-01031: 権限が不足しています
 ```
 SELECT * FROM system_privilege_map;
 grant all privileges to NAGAOKA
 ```
 
-ORA-29471: DBMS_SQL
+## ORA-29471: DBMS_SQL
 ```
 客户端session过期引起。关闭客户端，重新打开即可。
 ```
