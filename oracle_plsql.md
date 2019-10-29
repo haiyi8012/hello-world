@@ -1,6 +1,9 @@
 ## CREATE OR REPLACE DIRECTORY
 ```
 CREATE OR REPLACE DIRECTORY DIR_JINKYU2TMGIF_CSV AS 'D:\JINKYU2TMGIF_CSV';
+
+select directory_name, directory_path from all_directories 
+  where directory_name like 'DIR_JINKYU2TMGIF%';
 ```
 
 ## 将文件写入到BLOB字段
