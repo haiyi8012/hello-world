@@ -106,3 +106,8 @@ CALL dbms_java.set_output(2000);
 SELECT * FROM system_privilege_map;
 grant all privileges to NAGAOKA
 ```
+
+ORA-29471: DBMS_SQL
+```
+客户端session过期引起。关闭客户端，重新打开即可。
+```
