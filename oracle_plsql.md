@@ -1,7 +1,11 @@
 ## ORA-29532 调用java方法出错
 ```
-ORA-29532: 不明なJava例外でJavaコールが終了しました: java.security.AccessControlException: the Permission (java.io.FilePermission <<ALL FILES>> execute) has not been granted to KOUBE. Th...
+ORA-29532: 不明なJava例外でJavaコールが終了しました: 
+java.security.AccessControlException: the Permission (java.io.FilePermission <<ALL FILES>> execute) 
+has not been granted to KOUBE. Th...
 プロセスが終了しました。
+
+exec dbms_java.grant_permission( 'KOUBE', 'SYS:java.io.FilePermission', '<<ALL FILES>>', 'execute' );
 ```
 ## CREATE OR REPLACE DIRECTORY
 ```
