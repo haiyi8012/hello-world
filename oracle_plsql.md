@@ -1,3 +1,8 @@
+## ORA-29532 调用java方法出错
+```
+ORA-29532: 不明なJava例外でJavaコールが終了しました: java.security.AccessControlException: the Permission (java.io.FilePermission <<ALL FILES>> execute) has not been granted to KOUBE. Th...
+プロセスが終了しました。
+```
 ## CREATE OR REPLACE DIRECTORY
 ```
 CREATE OR REPLACE DIRECTORY DIR_JINKYU2TMGIF_CSV AS 'D:\JINKYU2TMGIF_CSV';
