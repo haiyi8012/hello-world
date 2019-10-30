@@ -1,3 +1,15 @@
+
+## 索引
+```
+--unique 
+ALTER TABLE DT_DJND0220
+  ADD CONSTRAINT DT_DJND0220_IDX
+  UNIQUE("CSHAINNO", "START_DTE", "KEY_DTE");
+
+ALTER TABLE table_name
+DROP CONSTRAINT constraint_name;
+  
+```
 ## ORA-29532 调用java方法出错
 ```
 ORA-29532: 不明なJava例外でJavaコールが終了しました: 
