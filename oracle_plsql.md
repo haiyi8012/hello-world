@@ -1,7 +1,13 @@
-
+## COALESCE / GREATEST /LEAST
+```
+select coalesce ( null, 2, 1 ) from dual ; -- 返回2
+select greatest (1, 3, 2 ) from dual ; -- 返回3
+select least (1, 3, 2 ) from dual ; -- 返回1
+select least (null, 'B', 'C' ) from dual ; -- 返回null
+```
 ## 索引
 ```
--- DT_DJND0220
+ DT_DJND0220
 ALTER TABLE DT_DJND0220
   ADD CONSTRAINT DT_DJND0220_IDX
   UNIQUE("CSHAINNO", "START_DTE", "KEY_DTE");
@@ -9,7 +15,7 @@ ALTER TABLE DT_DJND0220
 ALTER TABLE table_name
 DROP CONSTRAINT constraint_name;
 
--- DT_DJND0310
+ DT_DJND0310
 drop INDEX "KOUBE"."DT_DJND0310_IDX_2"
 
 ALTER TABLE DT_DJND0310
@@ -48,13 +54,13 @@ select directory_name, directory_path from all_directories
 
 ## 发送邮件异常ORA-29278 Service not available
 ```
-    --===test mark::
+    test mark::
         conn := utl_smtp.open_connection( 'smtp.qq.com', 25 );    
         utl_smtp.helo(conn, 'smtp.qq.com' );
         UTL_SMTP.COMMAND(conn,'AUTH LOGIN');
         UTL_SMTP.COMMAND(conn,UTL_RAW.CAST_TO_VARCHAR2(UTL_ENCODE.BASE64_ENCODE(UTL_RAW.CAST_TO_RAW('83109357'))));
         UTL_SMTP.COMMAND(conn,UTL_RAW.CAST_TO_VARCHAR2(UTL_ENCODE.BASE64_ENCODE(UTL_RAW.CAST_TO_RAW('wnymmcpkdujebhdh'))));
-    --===test mark end::
+    test mark end::
 ```
 ```
 --首先创建一个新的ACL文件
@@ -69,8 +75,8 @@ BEGIN
 END;
 /
 
--- commit
---提交完成后，查看acl文件是否建立；
+ commit
+提交完成后，查看acl文件是否建立；
 SELECT * --any_path 
 FROM resource_view WHERE any_path like '/sys/acls/%.xml';
 
@@ -103,7 +109,7 @@ begin
 
 --acl查询
 select * from dba_network_acl_privileges;
---============
+============
 
 ```
 
