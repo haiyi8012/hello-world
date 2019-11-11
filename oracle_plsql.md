@@ -1,3 +1,19 @@
+## with as
+```
+with as优点
+增加了sql的易读性，如果构造了多个子查询，结构会更清晰；
+更重要的是：“一次分析，多次使用”，这也是为什么会提供性能的地方，达到了“少读”的目标
+
+--相当于建了个e临时表
+with e as (select * from scott.emp e where e.empno=7499)
+select * from e;
+ 
+--相当于建了e、d临时表
+with
+     e as (select * from scott.emp),
+     d as (select * from scott.dept)
+select * from e, d where e.deptno = d.deptno;
+```
 ## start with connect by prior 递归查询用法
 select t.praentid, t.subid, level
   from a_test t
