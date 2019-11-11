@@ -1,3 +1,17 @@
+## start with connect by prior 递归查询用法
+select t.praentid, t.subid, level
+  from a_test t
+  start with t.subid = '7'
+  connect by subid = prior parentid 
+  order by level desc;
+  |praentid|subid|level|
+  |1|3|2|
+  |3|7|1|
+```
+start with 子句：遍历起始条件，有个小技巧，如果要查父结点，这里可以用子结点的列，反之亦然。
+connect by 子句：连接条件。关键词prior，prior跟父节点列parentid放在一起，就是往父结点方向遍历；prior跟子结点列subid放在一起，则往叶子结点方向遍历， parentid、subid两列谁放在“=”前都无所谓，关键是prior跟谁在一起。
+order by 子句：排序，不用多说。
+```
 ## DML/DDL 自检
 ```
 
