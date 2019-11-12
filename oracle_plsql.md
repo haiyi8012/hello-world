@@ -5,6 +5,8 @@
 注意点：
 1，需要先在客户端配置数据源网络服务名
 2，数据源的源表必须有主键
+创建物化视图的模式的方式有两种：ON DEMAND 和ON COMMIT
+刷新的方法有四种：FAST、COMPLETE、FORCE和NEVER
 ----
 1，创建DB link
 -- Drop existing database link 
