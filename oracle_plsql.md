@@ -1,3 +1,38 @@
+
+## 物化视图
+```
+远程数据的的本地副本
+注意点：
+1，需要先在客户端配置数据源网络服务名
+2，数据源的源表必须有主键
+----
+1，创建DB link
+-- Drop existing database link 
+drop database link ZHUHAI.COM;
+-- Create database link 
+create database link ZHUHAI.COM
+  connect to ZHUHAI
+  using 'haikou';
+
+2，创建物化视图
+CREATE MATERIALIZED VIEW MV_DBDIC
+REFRESH FORCE ON DEMAND
+START WITH SYSDATE
+NEXT SYSDATE+(2/(24*3600))   
+AS
+SELECT "DBDIC"."ID" "ID","DBDIC"."DBNUM" "DBNUM","DBDIC"."NAME" "NAME" FROM "DBDIC"@ZHUHAI.COM "DBDIC";
+
+3，创建视图
+create or replace view countview as
+select COUNT(*) COUNT
+from MV_DBDIC;
+
+4，在步骤3创建的视图上创建物化视图
+create materialized view MV_COUNTVIEW
+refresh force on demand
+as
+  select * from COUNTVIEW;
+```
 ## with as
 ```
 with as优点
