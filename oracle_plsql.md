@@ -1,4 +1,16 @@
+##客户端连接 12、18c 报ORA-28040和ORA-01017 的解决方法
+注意：=前后不要有空格
+```
+step.1
+SQLNET.ALLOWED_LOGON_VERSION=11
+SQLNET.ALLOWED_LOGON_VERSION_CLIENT=11
+SQLNET.ALLOWED_LOGON_VERSION_SERVE=11
 
+step.2
+使用alter修改密码
+alter user_name identified by passwd 
+
+```
 ## 物化视图
 ```
 远程数据的的本地副本
