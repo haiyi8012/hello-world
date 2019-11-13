@@ -1,6 +1,8 @@
 ##客户端连接 12、18c 报ORA-28040和ORA-01017 的解决方法
+
 注意：=前后不要有空格
 ```
+ファイル：sqlnet.ora
 step.1
 SQLNET.ALLOWED_LOGON_VERSION=11
 SQLNET.ALLOWED_LOGON_VERSION_CLIENT=11
