@@ -1,3 +1,16 @@
+## 将本地项目上传到github
+```
+git init
+git add *
+git commit -m "代码提交信息"
+git status
+git add new_dir
+git commit -m "first commit"
+git remote add origin https://github.com/haiyi8012/test.git
+git push -u origin master
+
+```
+
 ### 参考该文档：https://www.bootcss.com/p/git-guide/
 
 git init
