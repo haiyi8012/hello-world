@@ -1,3 +1,39 @@
+## PIPE ROW 用法
+在函数中，PIPE ROW 语句被用来返回该集合的单个元素，该函数必须以一个空的 RETURN 语句结束，以表明它已经完成。一旦我们创建了上述函数，我们就可以使用 TABLE 操作符从 SQL 查询中调用它
+```
+CREATE OR REPLACE TYPE ty_str_split IS TABLE OF VARCHAR2 (4000);
+create or replace FUNCTION fn_split (p_str IN VARCHAR2, p_delimiter IN VARCHAR2)
+RETURN ty_str_split PIPELINED
+IS
+	j INT := 0;
+	i INT := 1;
+	len INT := 0;
+	len1 INT := 0;
+	str VARCHAR2 (4000);
+BEGIN
+	len := LENGTH (p_str);
+	len1 := LENGTH (p_delimiter);
+	WHILE j < len LOOP
+		j := INSTR (p_str, p_delimiter, i);
+		IF j = 0 THEN
+			j := len;
+			str := SUBSTR (p_str, i);
+			PIPE ROW (str);
+			IF i >= len THEN
+				EXIT;
+			END IF;
+		ELSE
+			str := SUBSTR (p_str, i, j - i);
+			i := j + len1;
+			PIPE ROW (str);
+		END IF;
+	END LOOP;
+	RETURN;
+END fn_split;
+
+SELECT * FROM TABLE (fn_split ('1;;12;;123;;1234;;12345', ';;'));
+```
+
 ##客户端连接 12、18c 报ORA-28040和ORA-01017 的解决方法
 
 注意：=前后不要有空格
