@@ -162,6 +162,10 @@ has not been granted to KOUBE. Th...
 プロセスが終了しました。
 
 exec dbms_java.grant_permission( 'KOUBE', 'SYS:java.io.FilePermission', '<<ALL FILES>>', 'execute' );
+
+exec dbms_java.grant_permission( 'KOBE2', 'SYS:java.io.FilePermission', '<<ALL FILES>>', 'read' );
+exec dbms_java.grant_permission( 'KOBE2', 'SYS:java.io.FilePermission', '<<ALL FILES>>', 'delete' );
+exec dbms_java.grant_permission( 'KOBE2', 'SYS:java.io.FilePermission', '<<ALL FILES>>', 'execute' );
 ```
 ## CREATE OR REPLACE DIRECTORY
 ```
