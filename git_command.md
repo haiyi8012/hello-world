@@ -1,3 +1,6 @@
+## Git学习笔记
+https://www.jianshu.com/p/371e3f9d0535
+
 ## 如何解决error: failed to push some refs
 ```
 $ git push -u origin master
