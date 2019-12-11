@@ -1,5 +1,8 @@
 ## 常用
 git commit -**a**m "new55"
+
+git push origin master
+
 1.查看分支
 git branch -a 查看所有本地和远程分支
 git branch 查看本地分支
