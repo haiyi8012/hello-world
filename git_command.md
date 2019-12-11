@@ -1,3 +1,50 @@
+## 常用
+1.查看分支
+git branch -a 查看所有本地和远程分支
+git branch 查看本地分支
+git branch -r 查看远程分支
+
+2.切换分支
+
+git checkout <BranchName>
+
+3.删除分支
+git branch -d <BranchName> 删除本地分支
+git push origin --delete <BranchName> 删除远程分支
+git push origin : <BranchName>
+
+4.删除文件
+git clean -n 查看将会删除哪些文件（不会真正删除)
+Git clean -f 删除当前目录下没有track过的文件
+git clean -df 删除当前目录下没有track过的文件和文件夹
+git restet --hard 重置到上次commit的记录，后面修改的文件和新增的文件不会被track ,配合 git clean -df 回到上次提交的commit时的内容。
+
+5.取消暂存（track）
+
+git restore --staged <FileName>
+
+6.加入暂存
+git add. 点是全部修改新增文件暂存
+git add <FileName> 暂存对应文件
+
+7.查看当前状态
+
+git status
+
+8.提交文件到本地
+
+git commit
+
+9.推送文件到远程
+
+git push
+
+10.更新远程分支列表
+git remote update --prune
+git remote update -p
+
+
+
 ## Git学习笔记
 https://www.jianshu.com/p/371e3f9d0535
 
