@@ -1,3 +1,29 @@
+## clone 上传本地代码
+```
+git clone https://github.com/haiyi8012/global-region-demo.git
+＃以后每次提交代码，只需重复以下命令：
+$ git add .
+$ git commit -m"提交描述"
+$ git push
+```
+## ssh 上传本地代码
+```
+$ git config --global user.name "Your Name"
+$ git config --global user.email "xxxxxxx@qq.com"
+
+$ ssh-keygen -t rsa -C "xxxxxxx@qq.com"
+
+按照下图步骤，依次点击Setting》SSH and GPG keys进入SSH Key设置页面
+点击New SSH key新增SSH keys，title可以随意填写，Key填写刚刚复制的内容，然后保存。
+
+git init
+git remote add origin 83109357@qq.com:haiyi8012/demo.git
+＃以后每次提交代码，只需重复以下命令：
+$ git add .
+$ git commit -m"提交描述"
+$ git push origin master
+```
+
 ## 常用
 git commit -**a**m "new55"
 
