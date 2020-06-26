@@ -47,6 +47,9 @@ public int update(String sql, Object... params) throws SQLException {
 [Angular8入门教程](https://www.jianshu.com/p/84b38b3e5b56)
 
 
+[angular新手如何有效学习angular](https://www.zhihu.com/question/34083190)
+[Angular 学习资源清单 #10](https://github.com/wendellhu95/blog/issues/10)
+
 去下广告哈：
 ```
 $("img[class='img_ad']").remove();
