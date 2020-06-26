@@ -38,4 +38,8 @@ public int update(String sql, Object... params) throws SQLException {
 
 ## Anjular
 
-
+去下广告哈：
+```
+$("img[class='img_ad']").remove();
+$("img[style='width:300px;height:600px;']").remove();
+```
