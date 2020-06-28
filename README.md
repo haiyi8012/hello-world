@@ -50,8 +50,15 @@ public int update(String sql, Object... params) throws SQLException {
 [angular新手如何有效学习angular](https://www.zhihu.com/question/34083190)
 [Angular 学习资源清单 #10](https://github.com/wendellhu95/blog/issues/10)
 
+[Angular新建组件以及组件之间的调用](https://www.cnblogs.com/badaoliumangqizhi/p/12757419.html)
+
 去下广告哈：
 ```
 $("img[class='img_ad']").remove();
 $("img[style='width:300px;height:600px;']").remove();
 ```
+
+npm install -g @angular/cli
+ng new my-app
+cd my-app
+ng serve --open
