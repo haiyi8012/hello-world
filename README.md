@@ -52,6 +52,10 @@ public int update(String sql, Object... params) throws SQLException {
 
 [Angular新建组件以及组件之间的调用](https://www.cnblogs.com/badaoliumangqizhi/p/12757419.html)
 
+[一小时入门TypeScript-基础篇](https://www.jianshu.com/p/b89a192431b1)
+
+
+
 去下广告哈：
 ```
 $("img[class='img_ad']").remove();
