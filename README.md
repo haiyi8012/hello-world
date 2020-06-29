@@ -58,7 +58,7 @@ public int update(String sql, Object... params) throws SQLException {
 
 [一小时入门TypeScript-基础篇](https://www.jianshu.com/p/b89a192431b1)
 
-
+[Chrome开发者工具9个调试技巧详解](http://www.manongjc.com/article/11092.html)
 
 去下广告哈：
 ```
