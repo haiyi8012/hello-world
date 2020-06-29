@@ -47,6 +47,9 @@ public int update(String sql, Object... params) throws SQLException {
 
 [Angular8入门教程](https://www.jianshu.com/p/84b38b3e5b56)
 
+[Angular面试不用愁，29道题免费送上](https://zhuanlan.zhihu.com/p/80791364)
+
+[angular框架的面试题集锦](https://www.cnblogs.com/wcx-20151115-hzz/p/10525772.html)
 
 [angular新手如何有效学习angular](https://www.zhihu.com/question/34083190)
 [Angular 学习资源清单 #10](https://github.com/wendellhu95/blog/issues/10)
