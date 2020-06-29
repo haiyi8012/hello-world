@@ -38,6 +38,7 @@ public int update(String sql, Object... params) throws SQLException {
 
 
 ## js
+[经典的24个JavaScript面试题和答案！](https://www.jianshu.com/p/d4d2eb4be216)
 
 ## Anjular
 [Angular CLI 環境作成方法（Mac環境）](https://qiita.com/koronpo/items/cc7d3a1aabb7900e1e8e)
