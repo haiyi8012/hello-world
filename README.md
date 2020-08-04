@@ -79,3 +79,6 @@ npm install -g @angular/cli
 ng new my-app
 cd my-app
 ng serve --open
+
+vscode keymap
+https://baijiahao.baidu.com/s?id=1626592348988752335&wfr=spider&for=pc
