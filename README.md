@@ -89,3 +89,6 @@ https://angular.cn/guide/testing
 https://www.jianshu.com/p/66d829aeda4c
 https://qiita.com/howdy39/items/b9d704e7f84053924da3
 https://kazuhira-r.hatenablog.com/entry/20160507/1462632353
+
+jasmine -- 
+spy - 
