@@ -91,6 +91,9 @@ https://qiita.com/howdy39/items/b9d704e7f84053924da3
 https://kazuhira-r.hatenablog.com/entry/20160507/1462632353
 
 [jasmine -- ](https://jasmine.github.io/2.0/introduction.html#section-Spies)
+
+https://qiita.com/hmsk/items/8f6965968692186b1ea1
+
 spy - 
 
 https://thecodebuzz.com/cannot-find-module-angular-devkit-build-angular-package-json/
