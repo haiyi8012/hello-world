@@ -97,3 +97,6 @@ https://qiita.com/hmsk/items/8f6965968692186b1ea1
 spy - 
 
 https://thecodebuzz.com/cannot-find-module-angular-devkit-build-angular-package-json/
+
+(Bootstrap 4 Class Reference)[https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp]
+
