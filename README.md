@@ -100,3 +100,7 @@ https://thecodebuzz.com/cannot-find-module-angular-devkit-build-angular-package-
 
 [Bootstrap 4 Class Reference](https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp)
 
+[bootstrap_forms_inputs](https://www.w3schools.com/bootstrap4/bootstrap_forms_inputs.asp)
+
+
+
