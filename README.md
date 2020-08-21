@@ -110,3 +110,6 @@ https://thecodebuzz.com/cannot-find-module-angular-devkit-build-angular-package-
 [http://www.51testing.com/zhuanti/selenium.html](http://www.51testing.com/zhuanti/selenium.html)
 
 [protractortest](http://www.protractortest.org/#/)
+
+[webdriver-manager update: connect ECONNREFUSED 173.194.221.128:443](https://github.com/angular/webdriver-manager/issues/252)
+
