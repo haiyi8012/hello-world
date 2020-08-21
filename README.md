@@ -116,3 +116,5 @@ https://thecodebuzz.com/cannot-find-module-angular-devkit-build-angular-package-
 webdriver-manager update --gecko false --ignore_ssl --proxy http://proxy.co.jp:9125
 
 [developers.google.com](https://developers.google.com/web/updates/2020/08/devtools)
+
+https://techinfoofmicrosofttech.osscons.jp/index.php?PowerShell%E3%81%AEPS1%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E5%AE%9F%E8%A1%8C
