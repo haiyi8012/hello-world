@@ -113,3 +113,6 @@ https://thecodebuzz.com/cannot-find-module-angular-devkit-build-angular-package-
 
 [webdriver-manager update: connect ECONNREFUSED 173.194.221.128:443](https://github.com/angular/webdriver-manager/issues/252)
 
+webdriver-manager update --gecko false --ignore_ssl --proxy http://proxy.co.jp:9125
+
+
