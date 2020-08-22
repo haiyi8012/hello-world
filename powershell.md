@@ -108,3 +108,12 @@ Get-Extension myTextFile
 output:
 myTextFile.txt
 ```
+
+```
+function Add-Numbers {
+ $args[0] + $args[1]
+}
+
+PS C:\> Add-Numbers 5 10
+15
+```
