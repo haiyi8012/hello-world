@@ -120,3 +120,17 @@ PS C:\> Add-Numbers 5 10
 
 https://ss64.com/ps/
 
+[ps good idea](https://community.idera.com/database-tools/powershell/ask_the_experts/f/powershell_for_windows-12/5333/copy-and-rename-file-from-text-file)
+
+```
+Copy-Item -Path "C:\Logfiles\*" -Destination "C:\Drawings" -Recurse
+
+Copy-Item C:\Path\To\File\file.ext "C:\Path\To\New\File\$newfilename"
+
+(Get-Content c:\temp\test.txt) -replace '\[MYID\]', 'MyValue' | Set-Content c:\temp\test.txt
+
+PS >$text = "hello" PS >$newText = $text.Substring(0,1).ToUpper() + >> $text.Substring(1) >> $newText >> Hello
+
+```
+
+
