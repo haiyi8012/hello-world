@@ -122,3 +122,7 @@ webdriver-manager update --gecko false --ignore_ssl --proxy http://proxy.co.jp:9
 https://techinfoofmicrosofttech.osscons.jp/index.php?PowerShell%E3%81%AEPS1%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E5%AE%9F%E8%A1%8C
 
 [protractortest qa001](https://github.com/angular/protractor/issues/5434)
+
+[protractortest qa002](https://www.cnblogs.com/geilishu/p/5801175.html)
+
+
