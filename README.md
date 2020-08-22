@@ -125,4 +125,18 @@ https://techinfoofmicrosofttech.osscons.jp/index.php?PowerShell%E3%81%AEPS1%E3%8
 
 [protractortest qa002](https://www.cnblogs.com/geilishu/p/5801175.html)
 
+angular自动化测试主要分：端到端测试和单元测试，很明显两者都要熟练掌握。
 
+端到端测试是从用户的角度出发，认为整个系统是个黑盒，只会有UI暴露给用户，主要是模仿人工操作测试。
+
+单元测试认为整个系统是白盒，可以用来测试服务，控制器，过滤器还有基础函数等。
+
+端到端测试使用protractor，今天就扯这个
+
+ 
+
+为什么使用Protractor,也就是说Protractor有什么好处，有没有替代品？
+
+1,不需要基于id，css选择器，xpath等查询元素，你可以基于绑定，模型，迭代器等等进行测试。
+
+2,避免回调地狱。对比下面的代码就知道了。
