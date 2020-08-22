@@ -93,3 +93,18 @@ Compress-Archive @compress
 ```
 
 [using-powershell-to-compare-and-copy-files](https://stackoverflow.com/questions/26567850/using-powershell-to-compare-and-copy-files-of-a-certain-type-recursively)
+
+
+```
+Get-Extension.ps1
+function Get-Extension {
+  $name = $args[0] + ".txt"
+  $name
+}
+
+exec:
+Get-Extension myTextFile
+
+output:
+myTextFile.txt
+```
