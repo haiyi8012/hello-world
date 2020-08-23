@@ -143,3 +143,6 @@ angular自动化测试主要分：端到端测试和单元测试，很明显两�
 
 [protractor-jasmine2-screenshot-reporter](https://github.com/mlison/protractor-jasmine2-screenshot-reporter)
 
+[protractor - 分度器で複数のインスタンスを実行する](https://stackoverrun.com/ja/q/11336377)
+
+
