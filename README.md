@@ -90,7 +90,7 @@ https://www.jianshu.com/p/66d829aeda4c
 https://qiita.com/howdy39/items/b9d704e7f84053924da3
 https://kazuhira-r.hatenablog.com/entry/20160507/1462632353
 
-[jasmine -- ](https://jasmine.github.io/2.0/introduction.html#section-Spies)
+◯[jasmine -- ](https://jasmine.github.io/2.0/introduction.html#section-Spies)
 
 https://qiita.com/hmsk/items/8f6965968692186b1ea1
 
@@ -98,7 +98,7 @@ spy -
 
 https://thecodebuzz.com/cannot-find-module-angular-devkit-build-angular-package-json/
 
-[Bootstrap 4 Class Reference](https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp)
+◯[Bootstrap 4 Class Reference](https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp)
 
 [bootstrap_forms_inputs](https://www.w3schools.com/bootstrap4/bootstrap_forms_inputs.asp)
 
@@ -109,7 +109,7 @@ https://thecodebuzz.com/cannot-find-module-angular-devkit-build-angular-package-
 
 [http://www.51testing.com/zhuanti/selenium.html](http://www.51testing.com/zhuanti/selenium.html)
 
-[protractortest](http://www.protractortest.org/#/)
+◯[protractortest](http://www.protractortest.org/#/)
 
 [protractorest menu](http://www.protractortest.org/#/toc)
 
@@ -141,7 +141,7 @@ angular自动化测试主要分：端到端测试和单元测试，很明显两�
 
 2,避免回调地狱。对比下面的代码就知道了。
 
-[protractor-jasmine2-screenshot-reporter](https://github.com/mlison/protractor-jasmine2-screenshot-reporter)
+◯[protractor-jasmine2-screenshot-reporter](https://github.com/mlison/protractor-jasmine2-screenshot-reporter)
 
 [protractor - 分度器で複数のインスタンスを実行する](https://stackoverrun.com/ja/q/11336377)
 
