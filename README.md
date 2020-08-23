@@ -148,4 +148,6 @@ angular自动化测试主要分：端到端测试和单元测试，很明显两�
 resultJsonOutputFile,
 HtmlScreenshotReporter,
 
+[Customize the protractor test report/output](https://stackoverflow.com/questions/36985284/customize-the-protractor-test-report-output)
+
 
