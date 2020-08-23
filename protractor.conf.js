@@ -3,6 +3,12 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
+var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
+
+var reporter = new HtmlScreenshotReporter({
+  dest: 'target/screenshots',
+  filename: 'my-report.html'
+});
 
 /**
  * @type { import("protractor").Config }
@@ -23,16 +29,16 @@ exports.config = {
     defaultTimeoutInterval: 30000,
     print: function() {}
   },
+  
   onPrepare() {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.json')
     });
-    jasmine.getEnv().addReporter(new SpecReporter({
-      spec: {
-        displayStacktrace: StacktraceOption.PRETTY
-      }
-    }));
+    jasmine.getEnv().addReporter(reporter);
   },
-  resultJsonOutputFile: './outputFilePath.json',
+  // onPrepare: function() {
+  //   jasmine.getEnv().addReporter(reporter);
+  // },
+  //resultJsonOutputFile: './outputFilePath.json',
   
 };
