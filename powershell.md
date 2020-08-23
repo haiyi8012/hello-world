@@ -134,5 +134,5 @@ PS >$text = "hello" PS >$newText = $text.Substring(0,1).ToUpper() + >> $text.Sub
 ```
 [PowerShell 使い方メモ](https://qiita.com/opengl-8080/items/bb0f5e4f1c7ce045cc57)
 
-
+[WindowsのPowerShellのGet-ChildItemを使ってファイルを検索する](https://qiita.com/sukkyxp/items/bfe901b779cf25ce6a30)
 
