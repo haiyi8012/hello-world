@@ -132,5 +132,7 @@ Copy-Item C:\Path\To\File\file.ext "C:\Path\To\New\File\$newfilename"
 PS >$text = "hello" PS >$newText = $text.Substring(0,1).ToUpper() + >> $text.Substring(1) >> $newText >> Hello
 
 ```
+[PowerShell 使い方メモ](https://qiita.com/opengl-8080/items/bb0f5e4f1c7ce045cc57)
+
 
 
