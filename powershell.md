@@ -137,3 +137,8 @@ PS >$text = "hello" PS >$newText = $text.Substring(0,1).ToUpper() + >> $text.Sub
 [WindowsのPowerShellのGet-ChildItemを使ってファイルを検索する](https://qiita.com/sukkyxp/items/bfe901b779cf25ce6a30)
 
 [(Powershell) ファイル内の文字列を置換してコピーするスクリプト](https://qiita.com/ttn_tt/items/af60c693690207a350ca)
+
+```
+$(Get-Content -Encoding UTF8 '.\t.txt')　-creplace 'abc','Abc' | % { [Text.Encoding]::UTF8.GetBytes($_) }  | Set-Content -Path ".\BOMなしUF8なファイル.txt" -Encoding Byte
+$(Get-Content -Encoding UTF8 '.\t1.txt') -creplace 'abc','Abc' | Set-Content -Path '.\t02.txt' -Encoding UTF8
+```
