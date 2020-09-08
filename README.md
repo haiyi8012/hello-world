@@ -156,5 +156,5 @@ HtmlScreenshotReporter,
 
 https://developer.mozilla.org/ja/docs/Web/HTML/Element/input
 
-https://qiita.com/atsukita/items/a1d58781327886257192
+[AbstractControl](https://qiita.com/atsukita/items/a1d58781327886257192)
 
