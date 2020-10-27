@@ -1,5 +1,7 @@
 
 
+https://www.jetro.go.jp/sc/invest/setting_up/section2/page7.html
+
 ss/ssr配合Proxifier
 shadowsocks-R
 shadowsocks
