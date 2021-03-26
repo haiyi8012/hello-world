@@ -18,4 +18,6 @@ Ctrl+Shilf+F12 最大最小化当前编辑窗口（相当于Eclipse ctrl+M）
 Ctrl + F6 窗口间切换
 Ctrl +（-/+） 折叠放开代码
 Alt+Shift+R 将当前文件重命名（Eclipse中用F2、当时pycharm被冲突了）
+
+Alt+Shift+W システム・エクスプローラー
 ```
